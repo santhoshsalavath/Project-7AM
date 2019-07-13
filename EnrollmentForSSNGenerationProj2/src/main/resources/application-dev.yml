@@ -1,0 +1,69 @@
+# data base configuration details
+spring:  datasource:    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: manager
+    password: system# configure view resolver
+  mvc:    view:      prefix: /WEB-INF/pages/
+      suffix: .jsp# hibernate DDl to create the table
+# hibernate configuration
+  jpa:    hibernate:      ddl-auto: update    show-sql: true
+# server port configuration
+server:  port: 4041# configure context path
+  servlet:    context-path: /webApp
+#custom properties
+app: 
+ properties: 
+    successInsertion: SSN Number Is Inserted Successfully
+    failureInsertion: SSN Number Is Not Inserted
+    statesFaliure: States not found
+    tableEmpty: no SSN found in data base 
+    destUploadFile : E:/photosUploadFile/
+    destDownloadFile: E:/photosDownloadFile/
+    errorInsertion: User Not Store Please Try Again Leater
+    IdAndStateSuccess : ID is avilable and is belong to Washington state
+    stateFaliure: ID is available and is not belong to Washington state
+    IdAndStateFailure : ID is not available
+    ssnFailure: SSN Not Found 
+#Add loging details
+#logging:
+#  level:
+#    root: WARN        
+#    org:
+#      springframework:
+#        security: DEBUG
+#        web: ERROR    
+#      hibernate: DEBUG        
+#      apache:
+#        commons:
+#          dbcp2: DEBUG  
+# # file Loggin  configuration
+#--- 
+# logging:
+#  level:
+#    org:
+#      springframework:
+#        security: DEBUG
+#    hibernate: DEBU
+#  file: mylogfile.log  
+ # configure logger path
+#---
+# logging:
+#  level:
+#    org:
+#      springframework:
+#        security: DEBUG
+#    hibernate: DEBUG
+#
+#  path: concretepage/logs  
+## logging console
+#---
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security: DEBUG
+#    hibernate: DEBUG
+#
+#  pattern:
+#    console: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'  
+#    file: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
